@@ -1,9 +1,5 @@
 package com.Bridgelabz.employeewage;
 
-/**
- * UC5: Calculate Wages For a Month ie. 20 working days
- */
-
 public class EmployeeWage {
     static final int WAGE_PER_HOUR = 20;
     static final int FULL_TIME_HOUR = 8;
@@ -14,13 +10,13 @@ public class EmployeeWage {
 
     static final int IS_PART_TIME = 1;
 
-    public static void main(String[] args) {
+    public static void employeeWageMethod() {
         int day = 1;
         int totalWage = 0;
-        while(day <= WORKING_DAYS_PER_MONTH){
+        while (day <= WORKING_DAYS_PER_MONTH) {
             int dailyWage = 0;
             int employeeAttendance = (int) Math.floor(Math.random() * 10) % 3;
-            switch (employeeAttendance){
+            switch (employeeAttendance) {
                 case IS_FULL_TIME:
                     System.out.println("Employee is Full Time");
                     dailyWage = WAGE_PER_HOUR * FULL_TIME_HOUR;
@@ -38,7 +34,13 @@ public class EmployeeWage {
         }
     }
 
+    public static void main(String[] args) {
+        employeeWageMethod();
+    }
+}
+
+
 
     
 
-}
+
